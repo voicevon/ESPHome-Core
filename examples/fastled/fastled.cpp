@@ -1,4 +1,4 @@
-#include <esphomelib.h>
+#include <esphome.h>
 #include <esphomelib/light/light_effect.h>
 
 using namespace esphomelib;

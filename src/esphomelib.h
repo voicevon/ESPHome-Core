@@ -1,1 +1,0 @@
-#include "esphomelib/application.h"

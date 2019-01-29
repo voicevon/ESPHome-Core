@@ -1,6 +1,6 @@
 // This class shows you how you can use various i2c sensors with esphomelib
 
-#include <esphomelib.h>
+#include <esphome.h>
 
 using namespace esphomelib;
 

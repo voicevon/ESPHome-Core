@@ -1,4 +1,4 @@
-#include <esphomelib.h>
+#include <esphome.h>
 
 using namespace esphomelib;
 

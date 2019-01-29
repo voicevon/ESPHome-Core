@@ -1,10 +1,10 @@
 {
-  "name": "esphomelib",
-  "keywords": "esp32, home-assistant, ir, ledc, mqtt, iot",
-  "description": "esphomelib is a library designed to greatly simplify your firmware code for ESP32-based devices with full MQTT and Home Assistant support.",
+  "name": "ESPHome-Core",
+  "keywords": "esp32, esp8266, home-assistant, ir, ledc, mqtt, iot",
+  "description": "TODO",
   "repository": {
     "type": "git",
-    "url": "https://github.com/OttoWinter/esphomelib.git"
+    "url": "https://github.com/esphome/esphome-core.git"
   },
   "version": "1.11.0-dev",
   "authors": [
