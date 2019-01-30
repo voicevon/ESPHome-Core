@@ -61,7 +61,7 @@ void setup3_gpioPin(){
 
 
   //sensors: Adc
-  tds = App.make_adc_sensor("tds", 39, 2000);
+  tds = App.make_adc_sensor("tds", 39, 20000);
   tds->set_attenuation(ADC_11db);
   tds->set_filters({
       new sensor::SlidingWindowMovingAverageFilter(5, 5),
@@ -82,7 +82,7 @@ void setup3_gpioPin(){
   adc_leaking->set_filters({});
   adc_leaking->set_unit_of_measurement("V");
 
-  adc_ap = App.make_adc_sensor("ap", 33, 2000);
+  adc_ap = App.make_adc_sensor("ap", 33, 20000);
   adc_ap->set_attenuation(ADC_11db);
   adc_ap->set_filters({
       new sensor::SlidingWindowMovingAverageFilter(5, 5),
@@ -97,7 +97,7 @@ void setup3_gpioPin(){
     }),
   });
 
-  adc_bp = App.make_adc_sensor("bp", 34, 2000);
+  adc_bp = App.make_adc_sensor("bp", 34, 6000);
   adc_bp->set_attenuation(ADC_11db);
     adc_bp->set_filters({
       new sensor::SlidingWindowMovingAverageFilter(5, 5),
@@ -112,7 +112,7 @@ void setup3_gpioPin(){
     }),
   });
 
-  adc_sp = App.make_adc_sensor("sp", 35, 2000);
+  adc_sp = App.make_adc_sensor("sp", 35, 20000);
   adc_sp->set_attenuation(ADC_11db);
   adc_sp->set_filters({
       new sensor::SlidingWindowMovingAverageFilter(5, 5),
@@ -198,8 +198,8 @@ void setup1_servers(){
   // otacomponent->set_auth_password("1234567890");
   // otacomponent->start_safe_mode();
 
-  api::APIServer *api_apiserver = App.init_api_server();
-  api_apiserver->set_password("1234567890");
+  // api::APIServer *api_apiserver = App.init_api_server();
+  // api_apiserver->set_password("1234567890");
 
   mqtt::MQTTClientComponent *mqtt_mqttclientcomponent = App.init_mqtt("voicevon.vicp.io", 1883, "von", "von1970");
   mqtt_mqttclientcomponent->set_birth_message(mqtt::MQTTMessage{
@@ -223,6 +223,8 @@ void setup2_common(){
   sensor_wifisignalsensor->set_filters({
       new sensor::SlidingWindowMovingAverageFilter(5, 5),
   });
+
+  sensor::UptimeSensor *sensor_uptimesensor = App.make_uptime_sensor("Uptime");
 }
 
 void turn_off_relays()

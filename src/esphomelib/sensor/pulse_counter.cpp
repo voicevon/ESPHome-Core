@@ -145,9 +145,10 @@ bool PulseCounterBase::pulse_counter_setup_() {
 pulse_counter_t PulseCounterBase::read_raw_value_() {
   pulse_counter_t counter;
   pcnt_get_counter_value(this->pcnt_unit_, &counter);
-  pulse_counter_t ret = counter - this->last_value_;
-  this->last_value_ = counter;
-  return ret;
+  // pulse_counter_t ret = counter - this->last_value_;
+  // this->last_value_ = counter;
+  // return ret;
+  return counter;
 }
 #endif
 
@@ -169,9 +170,9 @@ void PulseCounterSensorComponent::dump_config() {
 
 void PulseCounterSensorComponent::update() {
   pulse_counter_t raw = this->read_raw_value_();
-  float value = (60000.0f * raw) / float(this->get_update_interval()); // per minute
-
-  ESP_LOGD(TAG, "'%s': Retrieved counter: %0.2f pulses/min", this->get_name().c_str(), value);
+  // float value = (60000.0f * raw) / float(this->get_update_interval()); // per minute
+  float value = raw;
+  ESP_LOGD(TAG, "'%s': Retrieved counter: %0.2f pulses", this->get_name().c_str(), value);
   this->publish_state(value);
 }
 

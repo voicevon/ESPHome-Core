@@ -42,6 +42,9 @@ sensor:
     # filters:
     #   - sliding_window_moving_average: {5,5} 
 
+  - platform: uptime
+    name: Uptime Sensor
+    
   - platform: hx711
     name: "weight"
     dout_pin: 22
