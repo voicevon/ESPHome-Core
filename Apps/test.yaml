@@ -1,0 +1,67 @@
+esphomeyaml:
+  name: test
+  platform: ESP32
+  board: nodemcu-32s
+
+wifi:
+  ssid: 'abc'
+  password: '1234567890'
+
+# Enable logging
+logger:
+
+Enable Home Assistant API
+api:
+  password: '1234567890'
+
+ota:
+  password: '1234567890'
+  
+deep_sleep:
+  run_duration: 10s
+  sleep_duration: 10min
+
+esp32_ble_tracker:
+  scan_interval: 300s
+  
+
+
+
+# switch:
+#   - platform: gpio
+#     pin: 5
+#     name: red_light
+#     id: red_light
+
+#   - platform: gpio
+#     pin: 4
+#     name: green_light
+#     id: green_light
+
+sensor:
+  - platform: xiaomi_mijia
+    mac_address: 7A:80:8E:19:36:BA
+    temperature:
+      name: "Xiaomi MiJia Temperature"
+    humidity:
+      name: "Xiaomi MiJia Humidity"
+    battery_level:
+      name: "Xiaomi MiJia Battery Level"
+
+  # - platform: adc
+  #   name: weight
+  #   pin: A0
+  #   filters: 
+  #     - lambda: return x * (9.0/5.0) + 32.0;
+  #     - multiply: 0.004854
+  #   on_value_range:
+  #     - above: 70
+  #       then:
+  #         - switch.turn_on: red_light
+  #         - switch.turn_off: green_light
+          
+  #     - below: 60
+  #       then:
+  #         - switch.turn_on: red_light
+  #         - switch.turn_off: green_light
+
