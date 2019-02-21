@@ -190,8 +190,8 @@ void setup1_servers(){
  
   WiFiComponent *wificomponent = App.init_wifi();
   WiFiAP wifiap = WiFiAP();
-  wifiap.set_ssid("FuckGFW");
-  wifiap.set_password("refuckgfw");
+  wifiap.set_ssid("yuxiu");
+  wifiap.set_password("yuxiu2010");
   wificomponent->add_sta(wifiap);
 
   // OTAComponent *otacomponent = App.init_ota();
@@ -203,13 +203,13 @@ void setup1_servers(){
 
   mqtt::MQTTClientComponent *mqtt_mqttclientcomponent = App.init_mqtt("voicevon.vicp.io", 1883, "von", "von1970");
   mqtt_mqttclientcomponent->set_birth_message(mqtt::MQTTMessage{
-      .topic = "water/status",
+      .topic = "yuxiu/status",
       .payload = "online",
       .qos = 0,
       .retain = true,
   });
   mqtt_mqttclientcomponent->set_last_will(mqtt::MQTTMessage{
-      .topic = "water/status",
+      .topic = "yuxiu/status",
       .payload = "offline",
       .qos = 0,
       .retain = true,
@@ -237,7 +237,7 @@ void turn_off_relays()
   r6->turn_off();  
 }
 void setup() {
-  App.set_name("water");
+  App.set_name("yuxiu");
   setup1_servers();
   setup2_common();
   setup3_gpioPin();
