@@ -263,12 +263,12 @@ int working_state =0;
 //  0 废水电磁阀已关。  关闭过程结束。 制水中 = false
 //  99 waring.
 void automation_main(){
-
-  if( adc_sp->state < 0.5f)
+  //一旦进入 99 状态，只能人工恢复！  这是老袁的需求！
+  if( adc_sp->state < 0.5f)    //源水压力
     working_state = 99;
-  if( adc_ap->state > 9.0f)
+  if( adc_ap->state > 9.0f)    //膜前压力
     working_state = 99;
-  if( leaking->state )
+  if( leaking->state )         //漏水
     working_state = 99;
 
   switch (working_state )
