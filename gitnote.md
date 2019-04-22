@@ -1,0 +1,7 @@
+/joint_state_desired_publisher
+/joint_state_publisher
+/move_group
+/robot_state_publisher
+/rosout
+/rviz_ibm_28714_7890803671492789067
+/virtual_joint_broadcaster_1
