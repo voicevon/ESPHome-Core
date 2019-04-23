@@ -5,6 +5,7 @@
    - <node name="virtual_joint_broadcaster_0" pkg="tf" type="static_transform_publisher"> 
       - or <node name="virtual_joint_broadcaster_1" pkg="tf2_ros" type="static_transform_publisher" >
    <node name="joint_state_desired_publisher" pkg="topic_tools" type="relay" >
+   <node name="move_group"  pkg="moveit_ros_move_group" type="move_group">
 ```
 - Invoved Package/Node
    - [joint_state_publisher](http://wiki.ros.org/joint_state_publisher)
@@ -16,6 +17,9 @@
       - [related](http://wiki.ros.org/tf2) 
    - [topic_tools](http://wiki.ros.org/topic_tools)
            /joint_state_desired_publisher  # This is not a ROS official node!
+   - [moveit_ros_move_group](http://wiki.ros.org/moveit_ros_move_group)
+           /[move_group](https://moveit.ros.org/documentation/concepts/)
+           
 - Involved Msg/Topic
    - Topic::[sensor_msgs](http://docs.ros.org/api/sensor_msgs/html/index-msg.html)
             /[JointState](http://docs.ros.org/api/sensor_msgs/html/msg/JointState.html)
