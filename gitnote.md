@@ -17,7 +17,7 @@
 - [joint_state_publisher](http://wiki.ros.org/joint_state_publisher)
 - joint_state_desired_publisher
     - Franka_ros 相关的节点。
-    - ASUS 没有这个节点，一切运行正常
+    - ASUS 没有这个节点，不可以 'Plan and Execute'
 - After running 'roslaunch panda_moveit_config joystick_control.launch'
 ```
 /joint_state_desired_publisher
