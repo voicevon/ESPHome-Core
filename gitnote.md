@@ -7,22 +7,22 @@
    <node name="joint_state_desired_publisher" pkg="topic_tools" type="relay" >
    <node name="move_group"  pkg="moveit_ros_move_group" type="move_group">
 ```
-- Invoved Package/Node
+- Invoved Package/Node treeview
    - [joint_state_publisher](http://wiki.ros.org/joint_state_publisher)
-           /joint_state_publisher
+      - /joint_state_publisher
    - [robot_state_publisher](http://wiki.ros.org/robot_state_publisher)
-           /robot_state_publisher
+      - /robot_state_publisher
    - [tf2_ros](http://wiki.ros.org/tf2_ros) 
-           /virtual_joint_broadcaster_1
+      - /virtual_joint_broadcaster_1
       - [related](http://wiki.ros.org/tf2) 
    - [topic_tools](http://wiki.ros.org/topic_tools)
-           /joint_state_desired_publisher  # This is not a ROS official node!
+      - /joint_state_desired_publisher  # This is not a ROS official node!
    - [moveit_ros_move_group](http://wiki.ros.org/moveit_ros_move_group)
-           /[move_group](https://moveit.ros.org/documentation/concepts/)
+      - /[move_group](https://moveit.ros.org/documentation/concepts/)
            
 - Involved Msg/Topic
    - Topic::[sensor_msgs](http://docs.ros.org/api/sensor_msgs/html/index-msg.html)
-            /[JointState](http://docs.ros.org/api/sensor_msgs/html/msg/JointState.html)
+      - /[JointState](http://docs.ros.org/api/sensor_msgs/html/msg/JointState.html)
 - what nodes are running after 
 ```
 /joint_state_publisher
