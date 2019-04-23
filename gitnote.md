@@ -21,8 +21,15 @@
       - /[move_group](https://moveit.ros.org/documentation/concepts/)
            
 - Involved Msg/Topic
-   - Topic::[sensor_msgs](http://docs.ros.org/api/sensor_msgs/html/index-msg.html)
+   - rostopic echo a/b  
+   - [sensor_msgs](http://docs.ros.org/api/sensor_msgs/html/index-msg.html)
       - /[JointState](http://docs.ros.org/api/sensor_msgs/html/msg/JointState.html)
+   - move_group
+      - /fake_controller_joint_states   
+
+- [An example code](http://enesbot.me/ros-moveit-tutorial.html)
+   - another example: https://blog.csdn.net/wxflamy/article/details/79160781 
+   - a good blog: https://blog.csdn.net/xu1129005165/article/details/70037698
 - what nodes are running after 
 ```
 /joint_state_publisher
