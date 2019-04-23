@@ -1,3 +1,5 @@
+-https://stackoverflow.com/questions/48830056/use-data-from-multiple-topics-in-ros-python
+
 # Inside `roslaunch panda_moveit_config demo.launch`
 ```
    - <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher">
