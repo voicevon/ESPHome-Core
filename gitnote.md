@@ -11,7 +11,7 @@
    - [joint_state_publisher](http://wiki.ros.org/joint_state_publisher)
       - /joint_state_publisher
    - [robot_state_publisher](http://wiki.ros.org/robot_state_publisher)
-      - /robot_state_publisher
+      - /[robot_state_publisher](http://wiki.ros.org/robot_state_publisher/Tutorials/Using%20the%20robot%20state%20publisher%20on%20your%20own%20robot)
    - [tf2_ros](http://wiki.ros.org/tf2_ros) 
       - /virtual_joint_broadcaster_1
       - [related](http://wiki.ros.org/tf2) 
